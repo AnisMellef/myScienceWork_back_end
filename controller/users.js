@@ -17,7 +17,8 @@ const multer = require("multer");
 
 exports.showAllProfile = async (req, res) => {
   try {
-    const allUser = await userSchema.find();
+    const { nom, prenom } = req.query;
+    let allUser = await userSchema.find();
     res.status(200).send({ msg: "this is the list of all users", allUser });
   } catch (err) {
     console.log("error in get all the profiles controller", err);

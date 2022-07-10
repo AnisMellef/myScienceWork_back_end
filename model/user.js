@@ -11,7 +11,7 @@ const User = new mongoose.Schema({
       {
         equipe: { type: String, required: true },
         fromDate: { type: String, required: true },
-        toDate: { type: String, required: true },
+        toDate: { type: String},
         pays: { type: String },
         organisation: { type: String },
       },
